@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Sales Dashboard</title>
+    <style>
+      /* Base Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Full viewport styling */
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden; /* Prevent scrollbars */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5; /* Light grey background */
+        color: #333;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header styling */
+      header {
+        width: 100%;
+        background-color: #8b0000; /* Deep red */
+        color: #ffffff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      /* Iframe full-screen container */
+      .iframe-container {
+        flex: 1;
+        width: 100vw; /* Full width */
+        height: calc(100vh - 4rem); /* Full height minus header height */
+        background-color: #fff;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        header {
+          font-size: 1.2rem; /* Smaller font for smaller screens */
+          padding: 0.8rem;
+        }
+
+        .iframe-container {
+          height: calc(100vh - 3.6rem); /* Adjust for smaller header */
+        }
+      }
+
+      @media (max-width: 480px) {
+        header {
+          font-size: 1rem; /* Further reduce font size for mobile */
+          padding: 0.6rem;
+        }
+
+        .iframe-container {
+          height: calc(100vh - 3rem); /* Adjust for even smaller header */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>Interactive Sales Dashboard</header>
+
+    <!-- Full-screen Iframe Section -->
+    <div class="iframe-container">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1ny7Pz8SoGUJosw_XZCMkm29eScYxYB_4B5oXvTsWIrQX4YWopKv3LlzuP0oMQi3-qNUjSW7rEtzn/pubhtml?gid=658038065&single=true"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </body>
+</html>
